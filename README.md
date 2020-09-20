@@ -18,13 +18,13 @@
     
     ```
 ### Run Below commands to launch server App using docker :
--1->To Build Jar File from docker: ``` mvn clean install -DskipTests ```
+-Step1->To Build Jar File from docker: ``` mvn clean install -DskipTests ```
 
--2 ->To Run Docker compose file: ``` docker-compose up  ```
+-Step2 ->To Run Docker compose file: ``` docker-compose up  ```
 
  This will launch your application on http://localhost:8082  port 
  
- -3-> To Launch Swagger UI -> http://localhost:8082/swagger-ui/index.html
+ To Launch Swagger UI -> http://localhost:8082/swagger-ui/index.html
  
  ### Use Following REST Api points:
     a.http://localhost:8082/sms/1         # (GET)here 1 is id no to get data by id
@@ -34,7 +34,7 @@
     e.http://localhost:8082/sms/22    # (DELETE) delete record from db by id
     
   
- -4->To Dump Data into MySql Container: ``` docker exec -i 25cab1fd  mysql -usmsuser -psmspassword mysql < backup.sql  ```
+ -Step3->To Dump Data into MySql Container: ``` docker exec -i 25cab1fd  mysql -usmsuser -psmspassword mysql < backup.sql  ```
  
         -Where:
                `25cab1fd ` is container id
@@ -44,7 +44,7 @@
         ( In our case this contains in same working dir)
         
          ```Note: This step is failing intermitantly.if you done with your data import on mySql container just point server url in client application inside sms-service.ts file.
-                currenly client application is pointed to inMemory data url bcz of step 4.
+                currenly client application is pointed to inMemory data url bcz of Step3 fails intermitently.
                 ```
            
               
@@ -53,9 +53,9 @@
 - From Above Downloaded  zip or cloneed repository.
 - Go to "SMS-Challange-App-Client" dir and open command terminal or bash terminal
 ### Run Below commands to launch Angular Client App using docker :
--1->To Build angular project in docker:   ```   docker build -t dockerdev .   ```
+-Step1->To Build angular project in docker:   ```   docker build -t dockerdev .   ```
 
--2->To Run Angular project:   ```  docker run -p 8000:4200 dockerdev   ```
+-Step2->To Run Angular project:   ```  docker run -p 8000:4200 dockerdev   ```
 
 This will launch your application on http://localhost:8000  port 
 
