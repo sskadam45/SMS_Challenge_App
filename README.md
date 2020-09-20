@@ -27,11 +27,11 @@
  -3-> To Launch Swagger UI -> http://localhost:8082/swagger-ui/index.html
  
  ### Use Following REST Api points:
-    a.http://localhost:8080/sms/1         # (GET)here 1 is id no to get data by id
-    b.http://localhost:8080/sms/getAll       # (GET)to get all records from db
-    c.http://localhost:8080/sms/create    # (POST)post record in db data 
-    d.http://localhost:8080/sms/update    # (PUT) update record in db
-    e.http://localhost:8080/sms/22    # (DELETE) delete record from db by id
+    a.http://localhost:8082/sms/1         # (GET)here 1 is id no to get data by id
+    b.http://localhost:8082/sms/getAll       # (GET)to get all records from db
+    c.http://localhost:8082/sms/create    # (POST)post record in db data 
+    d.http://localhost:8082/sms/update    # (PUT) update record in db
+    e.http://localhost:8082/sms/22    # (DELETE) delete record from db by id
     
   
  -4->To Dump Data into MySql Container: ``` docker exec -i 25cab1fd  mysql -usmsuser -psmspassword mysql < backup.sql  ```
