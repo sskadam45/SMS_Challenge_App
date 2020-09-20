@@ -1,0 +1,1 @@
+LOAD DATA INFILE 'D:\sk\study\sms\sms_challange_applications-master\sms_challange_applications-master\data.json' INTO TABLE test.sms_data;

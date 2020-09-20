@@ -1,0 +1,44 @@
+
+  <div class="container p-3 my-3 border"><legend>{{title}}</legend>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate style="width:50%">
+      <div class="form-group">
+            <label for="name">From-Date:</label>
+            <input type="date" name="start_date" placeholder="Start Date" class="form-control" [(ngModel)]="model.start_date" required #endDate="ngModel" >
+      </div>
+      <div class="form-group">
+          <label for="name">To-Date:</label>
+          <input type="date" name="end_date" placeholder="End Date" class="form-control" [(ngModel)]="model.end_date" required #endDate="ngModel" >
+      </div>
+      <button type="submit" class="btn btn-info">Filter</button>
+    </form>
+  </div>
+
+<div class="container-fluid p-3 my-3">
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th (click)='sortByType("id")' scope="col">Id<i class="fa fa-fw fa-sort"></i></th>
+        <th (click)='sortByType("start_date")' scope="col">Start Date <i class="fa fa-fw fa-sort"></i></th>
+        <th (click)='sortByType("price")' scope="col">Price <i class="fa fa-fw fa-sort"></i></th>
+        <th (click)='sortByType("color")' scope="col">Color <i class="fa fa-fw fa-sort"></i></th>
+        <th (click)='sortByType("end_date")' scope="col">End Date <i class="fa fa-fw fa-sort"></i></th>
+        <th (click)='sortByType("city")' scope="col">City <i class="fa fa-fw fa-sort"></i></th>
+        <th (click)='sortByType("status")' scope="col">Status <i class="fa fa-fw fa-sort"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of allSMSDataCopy">
+        <th scope="row">{{data.id}}</th>
+        <td>{{data.start_date}}</td>
+        <td>{{data.price}}</td>
+        <td>{{data.color}}</td>
+        <td>{{data.end_date}}</td>
+        <td>{{data.city}}</td>
+        <td>{{data.status}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
