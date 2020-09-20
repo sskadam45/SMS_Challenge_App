@@ -62,7 +62,7 @@ This will launch your application on http://localhost:8000  port
 
 Following tasks are covered in this app:
 
-    a.consumed `http://localhost:8080/sms/getAll` or  in memory url 'api/data' api to get all records.
+    a.consumed `http://localhost:8082/sms/getAll` or  in memory url 'api/data' api to get all records.
     b.records shown in tabular form.
     c.custom sorting ( ascending and descending ) of records based on column
     d.added simple date pickers to filter data based on start_date and end_date
